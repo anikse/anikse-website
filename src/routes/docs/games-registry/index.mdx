@@ -1,0 +1,42 @@
+---
+title: Games Registry
+---
+
+# Games Registry
+
+<sl-badge variant="neutral">Draft</sl-badge>
+
+## Game
+
+Each game is registered in a JSON file. The file contains the following information:
+
+- Game name
+- Game description
+- Game icon
+- Game repository in GitHub
+
+## List of Games
+
+The list of games is stored in a JSON file.
+
+File contains an array of links to game JSON files.
+
+## Storage
+
+The list of games and game JSON files are stored in GitHub repository. This approach has potential issues
+with scaling and performance, but it is the easiest to implement and maintain at the start.
+
+## Automation
+
+Whenever new PR is created in the repository, CI should check that the PR contains a valid game JSON file
+and whether user is not trying to modify other files. Optionally can validate user against lists of contributors
+and/or maintainers and banned users (to prevent abuse and other misuse).
+Contributors and maintainers are allowed to modify any files, banned users are not allowed to modify any files.
+
+If PR is valid, CI should merge it into the main branch automatically, otherwise report what went wrong back to PR.
+If user is banned, CI should close the PR automatically.
+
+Possible issue: if CI run out of credits, it will not be able to merge PRs automatically and manual work would be required.
+
+For such case, same logic can be implemented in a separate service that will be triggered by GitHub webhooks, however
+hosting that service would require additional costs, which shouldn't be spent until it is needed.

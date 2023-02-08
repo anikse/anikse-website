@@ -1,0 +1,23 @@
+---
+title: Games Browser
+---
+
+# Games Browser
+
+<sl-badge variant="neutral">Draft</sl-badge>
+
+Browser is single page web app that allows users to browse games registry and play games.
+
+## Framework
+
+Browser should be built using [Svelte](https://svelte.dev/) framework.
+
+## API usage
+
+Browser should use Github API to read [Games Registry](../games-registry/index.mdx) to retrieve games list and game metadata.
+
+### Rate Limit
+
+Possible issue: Github API has a limit of 60 requests per hour per IP address. To resolve this issue, the browser could use a proxy server that would cache the registry and serve it to the browser. However, this would require a server to be hosted somewhere and that would increase the cost of the project. Hosting this server could be done same as for [Matchmaking Server](../matchmaking-server/index.mdx).
+
+Another solution could be to ask users to provide their own Github API token (or just login in Github) to increase the limit, but this would make entry barrier higher, while it is important for games browser to be accessible to everyone.

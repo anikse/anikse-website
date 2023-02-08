@@ -1,0 +1,38 @@
+---
+title: Multiplayer SDK
+---
+
+# Multiplayer SDK
+
+<sl-badge variant="neutral">Draft</sl-badge>
+
+SDK should be integrated with major WebGL based game engines and frameworks such as Babylon.js, Godot, (maybe) Unity, etc.
+
+The first step would be to make a POC with one of open source engines, f.e. Bablyon.js.
+
+## API design
+
+SDK should be able to:
+
+- Create a game session
+- Join a game session
+- Leave a game session
+- Switch when host leaves
+- Sync game session state
+
+SDK should use matchmaking service for session creation and joining.
+
+SDK should use WebRTC for peer-to-peer communication.
+
+SDK should use Rollback or Lockstep for game state synchronization.
+
+## Scripting
+
+The API would have to take into account capabilities of the game engine and provide a way to integrate with it.
+
+For example, in Godot, the game state is represented by a tree of nodes. The game state is synchronized by serializing the tree and sending it to other players. The tree is deserialized and applied to the game state.
+
+Selecting a game engine and making a POC would help to understand how to integrate with it.
+
+Host/Client separation should be taken into account. When host leaves, another client would have to become a new host and this process should be transparent to the game. Need to decide whether to use a separate host/client API or a single API with host/client separation on the SDK side and how would that work with game engine scripting.
+Specifics are TBU here.

@@ -1,0 +1,30 @@
+---
+title: Matchmaking Server
+---
+
+# Matchmaking Server
+
+<sl-badge variant="neutral">Draft</sl-badge>
+
+Server should be a very simple and lightweight CRUD API that allows users to find other users to play with. Server should take into account the game metadata from registry such as number of players, and other parameters.
+
+Server should be able to:
+
+- Register a new game host instance
+- Find active game sessions
+- Change host of the game session (when host leaves)
+
+For storage service should use Redis. At first it should be a simple in-memory store, but later Redis persistence could potentially be added in case of server restarts.
+
+## Hosting
+
+Use any cloud with VM support to host the server.
+
+Implement backend on Rust to keep it lightweight and reduce operational costs to bare minimum.
+
+Keep both service and Redis in the same VM, so that they can share the same network interface and communicate via localhost.
+Later if needed Redis could be moved to a separate VM or cloud service.
+
+## API
+
+Use HTTP REST API and provide OpenAPI spec (TBU).
