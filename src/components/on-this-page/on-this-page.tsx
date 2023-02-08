@@ -10,7 +10,7 @@ export default component$(() => {
     headings?.filter((h) => h.level === 2 || h.level === 3) || [];
 
   const { pathname } = useLocation();
-  const editUrl = `${pathname}`;
+  const editUrl = `https://github.com/anikse/anikse-website/edit/main/src/routes${pathname}/index.mdx`;
 
   return (
     <aside class="on-this-page">
