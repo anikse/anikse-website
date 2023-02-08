@@ -74,5 +74,5 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "Welcome to Qwik Docs Starter",
+  title: "Anikse: open source UGC initiative",
 };
