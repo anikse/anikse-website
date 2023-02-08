@@ -1,0 +1,22 @@
+name: publish-to-github-pages
+run-name: Publishing website to Github Pages
+on:
+  push:
+    branches: [main]
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install --frozen-lockfile
+        shell: bash
+      - run: yarn build
+        shell: bash
+      - run: touch dist/.nojekyll # this to make Github not treat this as Jekyll
+      - run: echo 'anikse.dev' > ./dist/CNAME
+      - name: Deploy to Github Pages
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          yarn deploy -- -u "github-actions-bot <support+actions@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
