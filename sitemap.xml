@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>https://anikse.dev/docs/</loc></url>
+<url><loc>https://anikse.dev/</loc></url>
 <url><loc>https://anikse.dev/docs/matchmaking-server/</loc></url>
 <url><loc>https://anikse.dev/docs/multiplayer-sdk/</loc></url>
-<url><loc>https://anikse.dev/</loc></url>
-<url><loc>https://anikse.dev/docs/</loc></url>
-<url><loc>https://anikse.dev/about/</loc></url>
 <url><loc>https://anikse.dev/docs/games-browser/</loc></url>
 <url><loc>https://anikse.dev/docs/games-registry/</loc></url>
 <url><loc>https://anikse.dev/docs/vs-code-extension/</loc></url>
+<url><loc>https://anikse.dev/about/</loc></url>
 </urlset>
