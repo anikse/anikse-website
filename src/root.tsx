@@ -30,6 +30,8 @@ export default component$(() => {
           src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0/dist/shoelace.js"
         ></script>
 
+        {/* Use dark shoelace theme by default */}
+        {/* TODO: allow to select the theme */}
         <script
           dangerouslySetInnerHTML={
             "document.documentElement.classList.add('sl-theme-dark')"
