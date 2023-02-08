@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "anikse-website",
+  "short_name": "Anikse Website",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#000",
+  "description": "A Qwik project app."
+}
