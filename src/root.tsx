@@ -47,7 +47,6 @@ export default component$(() => {
           href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap"
           rel="stylesheet"
         />
-
         <link
           href="https://fonts.googleapis.com/css2?family=Kufam&family=Mochiy+Pop+One&display=swap"
           rel="stylesheet"
